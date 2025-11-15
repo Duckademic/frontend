@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duckademic</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Geist:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--  -->
+    <header class="header">
+      <div class="container">
+        <nav class="header-navigation">
+          <!-- <div class="logo-container"> -->
+          <a href="./index.html" class="logo">
+            <svg width="28" height="32" class="icon">
+              <use href="./images/icons.svg#icon-Logo-1-1"></use>
+            </svg>
+            Duckademic
+          </a>
+          <!-- </div> -->
+
+          <div class="search-bar">
+            <svg width="23" height="23" class="icon icon-search">
+              <use href="./images/icons.svg#icon-search-1"></use>
+            </svg>
+            <input type="text" placeholder="Search" class="search-bar-input" />
+          </div>
+
+          <div class="header-actions">
+            <button class="notifications">
+              <svg width="30" height="31" class="icon-bell">
+                <use href="./images/icons.svg#icon-bell-1"></use>
+              </svg>
+              <svg width="9" height="9" class="icon icon-bell-has-new">
+                <use href="./images/icons.svg#icon-Ellipse-1"></use>
+              </svg>
+            </button>
+            <a href="./index.html" class="header-actions-profile">
+              <img src="./images/profile_pic.png" alt="profile_pic" />
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container page-content">
+      <!-- Ліве меню -->
+      <aside class="sidebar-left">
+        <nav class="sidebar-navigation">
+          <ul class="sidebar-navigation-list">
+            <li class="sidebar-navigation-list-item highlighted">
+              <a href="#">
+                <svg width="16" height="16">
+                  <use href="./images/icons.svg#icon-SVG"></use>
+                </svg>
+                Home
+              </a>
+            </li>
+
+            <li class="sidebar-navigation-list-item">
+              <a href="#">
+                <svg width="16" height="16" class="icon">
+                  <use href="./images/icons.svg#icon-SVG-1"></use>
+                </svg>
+                My Courses
+              </a>
+            </li>
+
+            <li class="sidebar-navigation-list-item">
+              <a href="#">
+                <svg width="16" height="16">
+                  <use href="./images/icons.svg#icon-SVG-2"></use>
+                </svg>
+                Messaging
+              </a>
+            </li>
+
+            <li class="sidebar-navigation-list-item">
+              <a href="#">
+                <svg width="16" height="16">
+                  <use href="./images/icons.svg#icon-SVG-3"></use>
+                </svg>
+                Schedule
+              </a>
+            </li>
+
+            <li class="sidebar-navigation-list-item">
+              <a href="#">
+                <svg width="16" height="16">
+                  <use href="./images/icons.svg#icon-SVG-4"></use>
+                </svg>
+                Grades
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Основна частина -->
+      <main class="dashboard">
+        <!-- Ліва колонка -->
+        <div class="left">
+          <!-- Профіль -->
+          <section class="profile">
+            <h2 class="title hidden-title">Profile</h2>
+            <!-- Шаблон профіля -->
+            <template id="profile-template">
+              <article class="profile-card">
+                <a href="#" class="profile-card-avatar-link">
+                  <img src="" alt="user_profile_pic" class="avatar" />
+                </a>
+                <h3 class="name"></h3>
+                <p class="role"></p>
+                <div class="stats">
+                  <div>
+                    <svg width="20" height="20">
+                      <use href="./images/icons.svg#icon-SVG-1"></use>
+                    </svg>
+                    <h4 class="courses"></h4>
+                    <p class="profile-template-paragraf">Courses</p>
+                  </div>
+
+                  <div>
+                    <svg width="20" height="20">
+                      <use href="./images/icons.svg#icon-SVG-3"></use>
+                    </svg>
+                    <h4 class="assignments"></h4>
+                    <p class="profile-template-paragraf">Assignments Due</p>
+                  </div>
+
+                  <div>
+                    <svg width="20" height="20">
+                      <use href="./images/icons.svg#icon-SVG-9"></use>
+                    </svg>
+                    <h4 class="groups"></h4>
+                    <p class="profile-template-paragraf">Study Groups</p>
+                  </div>
+                </div>
+              </article>
+            </template>
+
+            <!-- Контейнер для профілів -->
+            <div id="profile-list"></div>
+          </section>
+
+          <section class="quick-actions">
+            <h2 class="title">Quick Actions</h2>
+            <ul>
+              <li>
+                <button>
+                  <svg width="16" height="16">
+                    <use href="./images/icons.svg#icon-SVG-4"></use>
+                  </svg>
+                  Show rating
+                </button>
+              </li>
+
+              <li>
+                <button>
+                  <svg width="16" height="16">
+                    <use href="./images/icons.svg#icon-SVG-3"></use>
+                  </svg>
+                  Check Schedule
+                </button>
+              </li>
+
+              <li>
+                <button>
+                  <svg width="16" height="16">
+                    <use href="./images/icons.svg#icon-bell-1"></use>
+                  </svg>
+                  Notifications
+                </button>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- Центр -->
+        <div class="center">
+          <section class="feed">
+            <h2 class="title hidden-title">Feed</h2>
+
+            <!-- Шаблон поста -->
+            <template id="post-template">
+              <article class="post">
+                <div class="post-header">
+                  <a href="#">
+                    <img
+                      src=""
+                      alt="author profile pic"
+                      width="48"
+                      height="48"
+                      class="avatar"
+                    />
+                  </a>
+                  <div class="post-header-info">
+                    <h3 class="author"></h3>
+                    <p class="role"></p>
+                    <h4 class="time"></h4>
+                  </div>
+                </div>
+
+                <p class="content"></p>
+
+                <div class="stats">
+                  <ul>
+                    <li class="like-item">
+                      <label class="like-checkbox">
+                        <input type="checkbox" class="like-input" />
+                        <svg width="16" height="16" class="like-icon">
+                          <use href="./images/icons.svg#icon-SVG-6"></use>
+                        </svg>
+                        <svg width="16" height="16" class="like-icon-active">
+                          <use href="./images/icons.svg#icon-like-active"></use>
+                        </svg>
+                      </label>
+                      <span class="likes"></span>
+                    </li>
+
+                    <li>
+                      <svg width="16" height="16">
+                        <use href="./images/icons.svg#icon-SVG-7"></use>
+                      </svg>
+                      <span class="comments"></span>
+                    </li>
+                    <li>
+                      <svg width="16" height="16">
+                        <use href="./images/icons.svg#icon-SVG-8"></use>
+                      </svg>
+                      <span class="shares"></span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </template>
+
+            <!-- Контейнер, куди JS буде підставляти пости -->
+            <div id="feed-list"></div>
+          </section>
+        </div>
+
+        <!-- Права колонка -->
+        <div class="right">
+          <section class="upcoming">
+            <div class="title-container">
+              <svg width="16" height="16">
+                <use href="./images/icons.svg#icon-SVG-3"></use>
+              </svg>
+              <h2 class="title">Upcoming</h2>
+            </div>
+
+            <!-- Шаблон для події -->
+            <template id="upcoming-template">
+              <li class="upcoming-item">
+                <h3 class="title"></h3>
+                <div class="time-container">
+                  <svg width="16" height="16" class="icon">
+                    <use href="./images/icons.svg#icon-SVG-11"></use>
+                  </svg>
+                  <p class="time"></p>
+                </div>
+                <h4 class="type"></h4>
+              </li>
+            </template>
+
+            <!-- Контейнер для подій -->
+            <ul id="upcoming-list"></ul>
+          </section>
+
+          <section class="course-progress">
+            <div class="title-container">
+              <svg width="16" height="16">
+                <use href="./images/icons.svg#icon-SVG-10"></use>
+              </svg>
+              <h2 class="title">Course Progress</h2>
+            </div>
+            <ul>
+              <li>
+                <div class="course-header">
+                  <h3>Programming</h3>
+                  <p>4+</p>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-bar-completed"></div>
+                </div>
+                <p class="progress-completed-description">75% complete</p>
+              </li>
+
+              <li>
+                <div class="course-header">
+                  <h3>Data Science</h3>
+                  <p class="green">5-</p>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-bar-completed data-science"></div>
+                </div>
+                <p class="progress-completed-description">50% complete</p>
+              </li>
+              <li>
+                <div class="course-header">
+                  <h3>Web Dev</h3>
+                  <p>4+</p>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-bar-completed web-dev"></div>
+                </div>
+                <p class="progress-completed-description">80% complete</p>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="./js/feed.js"></script>
+    <script src="./js/profile.js"></script>
+    <script src="./js/upcoming.js"></script>
+  </body>
+</html>
