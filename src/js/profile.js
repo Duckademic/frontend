@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const profileData = {
     name: "Emily Johnson",
     role: "Computer Science Student",
-    avatar: "./images/profile_pic.png",
+    avatar: "/img/profile_pic.png",
     courses: 3,
     assignments: 2,
     groups: 5

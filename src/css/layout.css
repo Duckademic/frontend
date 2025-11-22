@@ -1,0 +1,46 @@
+/* Загальний контейнер сторінки */
+.container {
+    max-width: 1728px;
+    margin: 0 auto;
+    padding: 0 70px;
+    background-color: #ffffff;
+}
+
+/* Контент сторінки: ліва колонка + центр + права */
+.page-content {
+    display: flex;
+}
+
+/* Основна частина */
+.dashboard {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f3f4f6;
+}
+
+/* Заголовки блоків */
+.title {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    line-height: 20px;
+}
+
+.hidden-title {
+    display: none;
+}
+
+/* Ліва колонка */
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Права колонка */
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

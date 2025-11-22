@@ -1,6 +1,6 @@
 const posts = [
   {
-    avatar: "./images/profile_pic.png",
+    avatar: "/img/profile_pic.png",
     author: "Dr. Sarah Smith",
     role: "Computer Science Professor",
     time: "2h ago",
@@ -10,7 +10,7 @@ const posts = [
     shares: 3
   },
   {
-    avatar: "./images/profile_pic.png",
+    avatar: "/img/profile_pic.png",
     author: "Emily Johnson",
     role: "Student • Computer Science",
     time: "4h ago",
@@ -20,7 +20,7 @@ const posts = [
     shares: 3
   },
   {
-    avatar: "./images/profile_pic.png",
+    avatar: "/img/profile_pic.png",
     author: "Duckucate Official",
     role: "Educational Platform",
     time: "6h ago",
