@@ -2,7 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const upcomingList = document.getElementById("upcoming-list");
   const template = document.getElementById("upcoming-template");
 
-  // Приклад масиву подій
+  // Якщо на цій сторінці немає блоку "Upcoming" — нічого не робимо
+  if (!upcomingList || !template) return;
+
   const upcomingEvents = [
     {
       title: "Programming Assignment Due",
@@ -24,14 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
-  // Генеруємо елементи
   upcomingEvents.forEach(event => {
     const clone = template.content.cloneNode(true);
 
     clone.querySelector(".title").textContent = event.title;
     clone.querySelector(".time").textContent = event.time;
     clone.querySelector(".type").textContent = event.type || "";
-    clone.querySelector(".icon use").setAttribute("href", event.icon);
+
+    // шукаємо <use> всередині svg з класом .icon
+    const useEl = clone.querySelector(".icon use");
+    if (useEl) {
+      useEl.setAttribute("href", event.icon);
+    }
 
     upcomingList.appendChild(clone);
   });

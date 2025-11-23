@@ -1,6 +1,7 @@
 .sidebar-left {
     padding-top: 16px;
     padding-right: 24px;
+    position: fixed;
 }
 
 .sidebar-navigation-list {
@@ -16,13 +17,14 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
+    transition: 200ms ease-in-out;
 }
 
 .sidebar-navigation-list-item a {
     display: flex;
     align-items: center;
     gap: 21px;
-    color: #374151;
+    color: #374151;  
 }
 
 .highlighted {
@@ -39,11 +41,11 @@
 .sidebar-navigation-list-item:focus:not(.highlighted) {
     cursor: pointer;
     background-color: #2563eb;
-    transition: cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+    /* transition: cubic-bezier(0.4, 0, 0.2, 1) 150ms; */
 }
 
 .sidebar-navigation-list-item:hover:not(.highlighted) a,
 .sidebar-navigation-list-item:focus:not(.highlighted) a {
     color: #ffffff;
-    transition: cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+    /* transition: cubic-bezier(0.4, 0, 0.2, 1) 150ms; */
 }

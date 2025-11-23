@@ -1,7 +1,18 @@
 *,
 ::before,
 ::after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 h1,

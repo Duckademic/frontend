@@ -34,29 +34,34 @@ const posts = [
 const feedList = document.getElementById("feed-list");
 const template = document.getElementById("post-template");
 
-feedList.addEventListener("change", (e) => {
-  if (e.target.classList.contains("like-input")) {
-    const likeSpan = e.target.closest("li").querySelector(".likes");
-    let count = parseInt(likeSpan.textContent);
-    if (e.target.checked) {
-      likeSpan.textContent = count + 1;
-    } else {
-      likeSpan.textContent = count - 1;
+// Якщо на сторінці немає стрічки – нічого не робимо
+if (!feedList || !template) {
+  // просто виходимо, щоб не ламати інші сторінки
+} else {
+  feedList.addEventListener("change", (e) => {
+    if (e.target.classList.contains("like-input")) {
+      const likeSpan = e.target.closest("li").querySelector(".likes");
+      let count = parseInt(likeSpan.textContent);
+      if (e.target.checked) {
+        likeSpan.textContent = count + 1;
+      } else {
+        likeSpan.textContent = count - 1;
+      }
     }
-  }
-});
+  });
 
-posts.forEach(p => {
-  const clone = template.content.cloneNode(true);
+  posts.forEach(p => {
+    const clone = template.content.cloneNode(true);
 
-  clone.querySelector(".avatar").src = p.avatar;
-  clone.querySelector(".author").textContent = p.author;
-  clone.querySelector(".role").textContent = p.role;
-  clone.querySelector(".time").textContent = p.time;
-  clone.querySelector(".content").textContent = p.content;
-  clone.querySelector(".likes").textContent = p.likes;
-  clone.querySelector(".comments").textContent = p.comments;
-  clone.querySelector(".shares").textContent = p.shares;
+    clone.querySelector(".avatar").src = p.avatar;
+    clone.querySelector(".author").textContent = p.author;
+    clone.querySelector(".role").textContent = p.role;
+    clone.querySelector(".time").textContent = p.time;
+    clone.querySelector(".content").textContent = p.content;
+    clone.querySelector(".likes").textContent = p.likes;
+    clone.querySelector(".comments").textContent = p.comments;
+    clone.querySelector(".shares").textContent = p.shares;
 
-  feedList.appendChild(clone);
-});
+    feedList.appendChild(clone);
+  });
+}

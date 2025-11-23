@@ -9,14 +9,34 @@
 /* Контент сторінки: ліва колонка + центр + права */
 .page-content {
     display: flex;
+    padding-top: 80px;
 }
 
 /* Основна частина */
 .dashboard {
     display: flex;
     gap: 20px;
-    padding: 20px;
+    padding: 20px 0 20px 20px;
     background-color: #f3f4f6;
+}
+
+.sidebar-space {
+    margin-left: 249px;
+    position: relative;
+}
+
+.sidebar-space::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -70px;
+    /* дорівнює padding-right у .container */
+    bottom: 0;
+    width: 70px;
+    background-color: #f3f4f6;
+    /* той самий сірий, що й у .dashboard */
+    pointer-events: none;
+    /* щоб не заважало клікам, якщо що */
 }
 
 /* Заголовки блоків */

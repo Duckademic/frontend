@@ -2,7 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const profileList = document.getElementById("profile-list");
   const template = document.getElementById("profile-template");
 
-  // Приклад даних (їх можна потім брати з сервера)
+  // Якщо на цій сторінці немає профілю — нічого не робимо
+  if (!profileList || !template) return;
+
   const profileData = {
     name: "Emily Johnson",
     role: "Computer Science Student",
@@ -12,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     groups: 5
   };
 
-  // Створюємо елемент профіля
   const clone = template.content.cloneNode(true);
 
   clone.querySelector(".avatar").src = profileData.avatar;
