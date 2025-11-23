@@ -1,0 +1,342 @@
+/* ===== Загальне оточення ===== */
+
+.grades-info {
+    flex: 1;
+    padding: 20px;
+    background-color: #f3f4f6;
+    min-height: calc(100vh - 80px);
+    box-sizing: border-box;
+}
+
+.grades-layout {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+}
+
+.grades-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 16px;
+}
+
+.grades-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+/* ===== Rating ===== */
+
+.grades-rating {
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    padding: 24px 28px 24px;
+    margin-bottom: 24px;
+}
+
+.grades-rating-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+.grades-rating-filters {
+    display: flex;
+    gap: 16px;
+}
+
+.grades-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.grades-filter-label {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.grades-filter-select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.grades-filter-caret {
+    font-size: 10px;
+    color: #6b7280;
+}
+
+/* ===== Слайдер рейтингу ===== */
+
+.grades-rating-slider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.grades-swiper {
+    flex: 1;
+    padding: 8px 0 4px;
+}
+
+/* Кнопки гортання */
+
+.grades-swiper-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Щоб Swiper не розтягував картку */
+
+.grades-swiper .swiper-slide {
+    width: 210px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== Прямокутна картка учасника ===== */
+
+.rating-card {
+    width: 210px;
+    height: 180px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+}
+
+.rating-card--current {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 1px #2563eb, 0 18px 45px rgba(37, 99, 235, 0.18);
+}
+
+.rating-card-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    object-fit: cover;
+    margin-bottom: 6px;
+}
+
+.rating-card-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.rating-card-group {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.rating-card-position {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.rating-card-score {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 2px;
+}
+
+.rating-card-score--accent {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+/* ===== Details (цифрові картки) ===== */
+
+.grades-details {
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    padding: 16px 20px 20px;
+    margin-bottom: 24px;
+}
+
+.grades-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.grades-stat-card {
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    padding: 14px 16px;
+    text-align: left;
+}
+
+.grades-stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.grades-stat-value--blue {
+    color: #2563eb;
+}
+
+.grades-stat-value--green {
+    color: #22c55e;
+}
+
+.grades-stat-value--purple {
+    color: #6366f1;
+}
+
+.grades-stat-value--orange {
+    color: #f97316;
+}
+
+.grades-stat-label {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* ===== Courses breakdown ===== */
+
+.grades-courses {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.course-grade-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 12px 16px 16px;
+}
+
+.course-grade-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.course-grade-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.course-grade-toggle {
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.course-grade-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.course-grade-mark {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background-color: #ecfdf3;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+}
+
+.course-grade-total {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.course-grade-body {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.course-grade-block {
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+    padding: 10px 12px;
+}
+
+.course-grade-block-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 2px;
+}
+
+.course-grade-block-label {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+/* ===== Адаптив ===== */
+
+@media (max-width: 960px) {
+    .grades-rating-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .grades-rating-filters {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .grades-stats-grid,
+    .course-grade-body {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+
+    .grades-stats-grid,
+    .course-grade-body {
+        grid-template-columns: 1fr;
+    }
+
+    .grades-swiper .swiper-slide {
+        width: 180px;
+    }
+}

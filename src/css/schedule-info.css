@@ -1,0 +1,274 @@
+/* ===== Загальне оточення ===== */
+
+.schedule-info {
+    flex: 1;
+    padding: 20px;
+    background-color: #f3f4f6;
+    min-height: calc(100vh - 80px);
+    box-sizing: border-box;
+}
+
+.schedule-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.schedule-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 16px;
+}
+
+/* ===== Карта розкладу ===== */
+
+.schedule-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    padding: 20px 24px 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 2.2fr) minmax(260px, 1fr);
+    gap: 24px;
+}
+
+/* ===== Ліва частина: today + навігація ===== */
+
+.schedule-main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.schedule-main-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.schedule-main-icon {
+    font-size: 18px;
+}
+
+.schedule-main-heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* кнопки навігації */
+
+.schedule-main-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.schedule-nav-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.schedule-day-btn {
+    padding: 6px 20px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.schedule-view-select {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.schedule-view-caret {
+    font-size: 10px;
+}
+
+/* ===== Список пар ===== */
+
+.schedule-classes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.class-row {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    align-items: stretch;
+    gap: 12px;
+}
+
+.class-time {
+    font-size: 13px;
+    color: #4b5563;
+    padding-top: 16px;
+}
+
+/* картка пари */
+
+.class-card {
+    position: relative;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+}
+
+.class-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 18px;
+    background-color: #e5e7eb;
+}
+
+/* кольорові смужки */
+
+.class-row--blue .class-card::before {
+    background-color: #dbeafe;
+}
+
+.class-row--green .class-card::before {
+    background-color: #dcfce7;
+}
+
+.class-row--rose .class-card::before {
+    background-color: #fee2e2;
+}
+
+.class-row--amber .class-card::before {
+    background-color: #fef3c7;
+}
+
+.class-card-inner {
+    padding: 20px 20px 14px;
+}
+
+/* заголовок + бейдж */
+
+.class-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+}
+
+.class-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.class-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background-color: #111827;
+    color: #ffffff;
+}
+
+/* викладач */
+
+.class-teacher {
+    font-size: 13px;
+    color: #4b5563;
+    margin-bottom: 6px;
+}
+
+/* мета-інфо */
+
+.class-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+    color: #4b5563;
+}
+
+.class-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.class-meta-icon {
+    font-size: 14px;
+}
+
+.class-meta-dates {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+/* ===== Права частина: фільтри ===== */
+
+.schedule-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.filter-label {
+    font-size: 13px;
+    color: #4b5563;
+}
+
+.filter-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.filter-caret {
+    font-size: 10px;
+    color: #6b7280;
+}
+
+/* ===== Адаптив ===== */
+
+@media (max-width: 960px) {
+    .schedule-card {
+        grid-template-columns: 1fr;
+    }
+
+    .class-row {
+        grid-template-columns: 100px minmax(0, 1fr);
+    }
+}

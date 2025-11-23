@@ -1,0 +1,101 @@
+<main class="sidebar-space schedule-info">
+  <section class="schedule-layout">
+    <h1 class="schedule-title">Schedule</h1>
+
+    <div class="schedule-card">
+      <!-- Ліва частина: розклад -->
+      <section class="schedule-main">
+        <header class="schedule-main-header">
+          <div class="schedule-main-left">
+            <span class="schedule-main-icon">⏺</span>
+            <span class="schedule-main-heading">Today&apos;s Classes</span>
+          </div>
+
+          <div class="schedule-main-controls">
+            <button
+              class="schedule-nav-btn"
+              type="button"
+              id="schedule-prev-btn"
+            >
+              ‹
+            </button>
+
+            <button
+              class="schedule-day-btn"
+              type="button"
+              id="schedule-day-btn"
+            >
+              <span id="schedule-day-label">Monday</span>
+            </button>
+
+            <button
+              class="schedule-nav-btn"
+              type="button"
+              id="schedule-next-btn"
+            >
+              ›
+            </button>
+
+            <button
+              class="schedule-view-select"
+              type="button"
+              id="schedule-view-btn"
+            >
+              <span id="schedule-view-label">General</span>
+              <span class="schedule-view-caret">▾</span>
+            </button>
+          </div>
+        </header>
+
+        <!-- Список занять — JS рендерить сюди -->
+        <ul class="schedule-classes" id="schedule-classes"></ul>
+      </section>
+
+      <!-- Права частина: фільтри -->
+      <aside class="schedule-filters">
+        <div class="filter-group">
+          <label class="filter-label">Faculty</label>
+          <button class="filter-select" type="button">
+            <span>Faculty of Information Technology</span>
+            <span class="filter-caret">▾</span>
+          </button>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">Specialty</label>
+          <button class="filter-select" type="button">
+            <span>Software Engineering</span>
+            <span class="filter-caret">▾</span>
+          </button>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">Year</label>
+          <button class="filter-select" type="button">
+            <span>3 Bachelor</span>
+            <span class="filter-caret">▾</span>
+          </button>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">Group</label>
+          <button class="filter-select" type="button">
+            <span>2</span>
+            <span class="filter-caret">▾</span>
+          </button>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">Subgroup</label>
+          <button class="filter-select" type="button">
+            <span>5</span>
+            <span class="filter-caret">▾</span>
+          </button>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Скрипт розкладу -->
+  <script src="./js/schedule.js" defer></script>
+</main>

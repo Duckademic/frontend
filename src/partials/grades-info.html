@@ -1,0 +1,301 @@
+<main class="sidebar-space grades-info">
+  <section class="grades-layout">
+    <h1 class="grades-title">Grades</h1>
+
+    <!-- ===== Rating (верхній блок) ===== -->
+    <section class="grades-rating">
+      <!-- Фільтри -->
+      <header class="grades-rating-header">
+        <h2 class="grades-section-title">Rating</h2>
+
+        <div class="grades-rating-filters">
+          <div class="grades-filter">
+            <label class="grades-filter-label" for="grades-course"
+              >Course</label
+            >
+            <button
+              class="grades-filter-select"
+              id="grades-course"
+              type="button"
+            >
+              <span>All courses</span>
+              <span class="grades-filter-caret">▾</span>
+            </button>
+          </div>
+
+          <div class="grades-filter">
+            <label class="grades-filter-label" for="grades-year">Year</label>
+            <button class="grades-filter-select" id="grades-year" type="button">
+              <span>3 Bachelor (Current)</span>
+              <span class="grades-filter-caret">▾</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Слайдер учасників -->
+      <div class="grades-rating-slider">
+        <button
+          class="grades-swiper-btn grades-swiper-prev"
+          type="button"
+          aria-label="Previous"
+        >
+          ‹
+        </button>
+
+        <div class="grades-swiper swiper">
+          <div class="swiper-wrapper">
+            <!-- Один учасник -->
+            <div class="swiper-slide">
+              <article class="rating-card rating-card--me">
+                <img
+                  src="/img/profile_pic.png"
+                  alt="Emily Johnson avatar"
+                  class="rating-card-avatar"
+                />
+                <h3 class="rating-card-name">Emily Johnson</h3>
+                <p class="rating-card-group">SE-32</p>
+                <p class="rating-card-position">1</p>
+                <p class="rating-card-score">99.81</p>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="rating-card">
+                <img
+                  src="/img/profile_pic.png"
+                  alt="Lily Thompson avatar"
+                  class="rating-card-avatar"
+                />
+                <h3 class="rating-card-name">Lily Thompson</h3>
+                <p class="rating-card-group">SE-32</p>
+                <p class="rating-card-position">2</p>
+                <p class="rating-card-score">98.07</p>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="rating-card rating-card--current">
+                <img
+                  src="/img/profile_pic.png"
+                  alt="You avatar"
+                  class="rating-card-avatar"
+                />
+                <h3 class="rating-card-name">You</h3>
+                <p class="rating-card-group">SE-32</p>
+                <p class="rating-card-position">3</p>
+                <p class="rating-card-score rating-card-score--accent">97.67</p>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="rating-card">
+                <img
+                  src="/img/profile_pic.png"
+                  alt="Mason Clark avatar"
+                  class="rating-card-avatar"
+                />
+                <h3 class="rating-card-name">Mason Clark</h3>
+                <p class="rating-card-group">SE-31</p>
+                <p class="rating-card-position">4</p>
+                <p class="rating-card-score">96.58</p>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="rating-card">
+                <img
+                  src="/img/profile_pic.png"
+                  alt="Harper White avatar"
+                  class="rating-card-avatar"
+                />
+                <h3 class="rating-card-name">Harper White</h3>
+                <p class="rating-card-group">SE-34</p>
+                <p class="rating-card-position">5</p>
+                <p class="rating-card-score">95.64</p>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="rating-card">
+                <img
+                  src="/img/profile_pic.png"
+                  alt="Oliver Scott avatar"
+                  class="rating-card-avatar"
+                />
+                <h3 class="rating-card-name">Oliver Scott</h3>
+                <p class="rating-card-group">SE-33</p>
+                <p class="rating-card-position">6</p>
+                <p class="rating-card-score">95.31</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="grades-swiper-btn grades-swiper-next"
+          type="button"
+          aria-label="Next"
+        >
+          ›
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== Details (карточки з цифрами) ===== -->
+    <section class="grades-details">
+      <h2 class="grades-section-title">Details</h2>
+
+      <div class="grades-stats-grid">
+        <article class="grades-stat-card">
+          <p class="grades-stat-value grades-stat-value--blue">97.67</p>
+          <p class="grades-stat-label">Overall GPA</p>
+        </article>
+
+        <article class="grades-stat-card">
+          <p class="grades-stat-value grades-stat-value--green">5+</p>
+          <p class="grades-stat-label">Performance</p>
+        </article>
+
+        <article class="grades-stat-card">
+          <p class="grades-stat-value grades-stat-value--purple">3</p>
+          <p class="grades-stat-label">Subjects</p>
+        </article>
+
+        <article class="grades-stat-card">
+          <p class="grades-stat-value grades-stat-value--orange">3</p>
+          <p class="grades-stat-label">Rating</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Courses breakdown ===== -->
+    <section class="grades-courses">
+      <!-- 1. Intro -->
+      <article class="course-grade-card">
+        <header class="course-grade-header">
+          <div class="course-grade-title-wrap">
+            <button class="course-grade-toggle" type="button">▾</button>
+            <h3 class="course-grade-title">Introduction to Programming</h3>
+            <span class="course-grade-mark course-grade-mark--green">5+</span>
+          </div>
+
+          <p class="course-grade-total">97</p>
+        </header>
+
+        <div class="course-grade-body">
+          <div class="course-grade-block">
+            <p class="course-grade-block-value">40/40</p>
+            <p class="course-grade-block-label">Assignments</p>
+          </div>
+          <div class="course-grade-block">
+            <p class="course-grade-block-value">8/10</p>
+            <p class="course-grade-block-label">Module 1</p>
+          </div>
+          <div class="course-grade-block">
+            <p class="course-grade-block-value">10/10</p>
+            <p class="course-grade-block-label">Module 2</p>
+          </div>
+          <div class="course-grade-block">
+            <p class="course-grade-block-value">39/40</p>
+            <p class="course-grade-block-label">Exam</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Data Science -->
+      <article class="course-grade-card">
+        <header class="course-grade-header">
+          <div class="course-grade-title-wrap">
+            <button class="course-grade-toggle" type="button">▾</button>
+            <h3 class="course-grade-title">Data Science</h3>
+            <span class="course-grade-mark course-grade-mark--green">5+</span>
+          </div>
+
+          <p class="course-grade-total">98</p>
+        </header>
+
+        <div class="course-grade-body">
+          <div class="course-grade-block">
+            <p class="course-grade-block-value">40/40</p>
+            <p class="course-grade-block-label">Assignments</p>
+          </div>
+          <div class="course-grade-block">
+            <p class="course-grade-block-value">18/20</p>
+            <p class="course-grade-block-label">Module</p>
+          </div>
+          <div class="course-grade-block">
+            <p class="course-grade-block-value">40/40</p>
+            <p class="course-grade-block-label">Exam</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Web Dev -->
+      <article class="course-grade-card">
+        <header class="course-grade-header">
+          <div class="course-grade-title-wrap">
+            <button class="course-grade-toggle" type="button">▾</button>
+            <h3 class="course-grade-title">Web Development</h3>
+            <span class="course-grade-mark course-grade-mark--green">5+</span>
+          </div>
+
+          <p class="course-grade-total">98</p>
+        </header>
+
+        <div class="course-grade-body">
+          <div class="course-grade-block">
+            <p class="course-grade-block-value">40/40</p>
+            <p class="course-grade-block-label">Assignments</p>
+          </div>
+          <div class="course-grade-block">
+            <p class="course-grade-block-value">8/10</p>
+            <p class="course-grade-block-label">Module 1</p>
+          </div>
+          <div class="course-grade-block">
+            <p class="course-grade-block-value">10/10</p>
+            <p class="course-grade-block-label">Module 2</p>
+          </div>
+          <div class="course-grade-block">
+            <p class="course-grade-block-value">40/40</p>
+            <p class="course-grade-block-label">Exam</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </section>
+</main>
+
+<!-- ===== Swiper CDN + ініціалізація слайдера ===== -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const gradesSwiper = new Swiper(".grades-swiper", {
+      slidesPerView: "auto", // ширина береться зі стилів .swiper-slide
+      centeredSlides: true, // активний слайд по центру, як на макеті
+      spaceBetween: 32,
+      navigation: {
+        nextEl: ".grades-swiper-next",
+        prevEl: ".grades-swiper-prev",
+      },
+      breakpoints: {
+        0: {
+          centeredSlides: false,
+          spaceBetween: 16,
+        },
+        768: {
+          centeredSlides: true,
+          spaceBetween: 24,
+        },
+        1200: {
+          centeredSlides: true,
+          spaceBetween: 32,
+        },
+      },
+    });
+  });
+</script>
