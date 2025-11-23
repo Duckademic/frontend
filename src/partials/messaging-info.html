@@ -1,14 +1,171 @@
-<!-- <main class="sidebar-space messaging-info">
-  <div class="chat-groups">
-    <h1 class="chat-groups-title">DuckChat</h1>
-    <p class="courses-info-subtitle">Manage your enrolled courses</p>
-    <ul class="chat-groups-list">
-      <li class="chat-groups-list-item"></li>
-      <li class="chat-groups-list-item"></li>
-      <li class="chat-groups-list-item"></li>
-    </ul>
+<main class="sidebar-space messaging-info">
+  <div class="messenger">
+    <!-- Ліва колонка: групи / чати -->
+    <aside class="chat-groups">
+      <header class="chat-groups-header">
+        <h1 class="chat-groups-title">DuckChat</h1>
+
+        <div class="chat-groups-search">
+          <svg width="23" height="23" class="icon icon-search">
+            <use href="/img/icons.svg#icon-search-1"></use>
+          </svg>
+          <input
+            type="text"
+            placeholder="Search conversations..."
+            class="chat-groups-search-input"
+          />
+        </div>
+      </header>
+
+      <ul class="chat-groups-list">
+        <li class="chat-groups-item chat-groups-item--active">
+          <div class="chat-groups-item-main">
+            <div class="chat-groups-item-top">
+              <h2 class="chat-groups-name">General Discussion</h2>
+              <span class="chat-groups-time">2 min ago</span>
+            </div>
+
+            <div class="chat-groups-item-bottom">
+              <p class="chat-groups-last-message">
+                Hi everyone. Let's discuss the gro...
+              </p>
+
+              <div class="chat-groups-meta">
+                <span class="chat-groups-participants">45 participants</span>
+                <span class="chat-groups-unread">2</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="chat-groups-item">
+          <div class="chat-groups-item-main">
+            <div class="chat-groups-item-top">
+              <h2 class="chat-groups-name">Programming Help</h2>
+              <span class="chat-groups-time">15 min ago</span>
+            </div>
+
+            <div class="chat-groups-item-bottom">
+              <p class="chat-groups-last-message">
+                Can someone help with the loop?
+              </p>
+
+              <div class="chat-groups-meta">
+                <span class="chat-groups-participants">32 participants</span>
+                <span class="chat-groups-unread">1</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="chat-groups-item">
+          <div class="chat-groups-item-main">
+            <div class="chat-groups-item-top">
+              <h2 class="chat-groups-name">Study Group</h2>
+              <span class="chat-groups-time">1 hour ago</span>
+            </div>
+
+            <div class="chat-groups-item-bottom">
+              <p class="chat-groups-last-message">Meeting tomorrow at 3 PM</p>
+
+              <div class="chat-groups-meta">
+                <span class="chat-groups-participants">8 participants</span>
+                <span class="chat-groups-unread">0</span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Права колонка: активний чат -->
+    <section class="chat-messager">
+      <header class="messager-header">
+        <div class="messager-header-main">
+          <h2 class="messager-title">General Discussion</h2>
+          <p class="messager-participants">45 participants</p>
+        </div>
+        <div class="messager-header-actions">
+          <button type="button" class="messager-header-btn">
+            <svg width="20" height="20" class="icon">
+              <!-- підстав будь-який свій ікон-меню, наприклад три крапки -->
+              <use href="/img/icons.svg#icon-SVG-12"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Список повідомлень -->
+      <div class="chat">
+        <div class="chat-messages">
+          <!-- Повідомлення іншого користувача -->
+          <div class="message">
+            <div class="message-avatar">
+              <img src="/img/profile_pic.png" alt="Emily Johnson avatar" />
+            </div>
+
+            <div class="message-body">
+              <div class="message-header">
+                <span class="message-author">Emily Johnson</span>
+                <span class="message-time">9:20 AM</span>
+              </div>
+              <div class="message-bubble">
+                Hi everyone. Let's discuss the group assignment.
+              </div>
+            </div>
+          </div>
+
+          <div class="message">
+            <div class="message-avatar">
+              <img src="/img/profile_pic.png" alt="Sarah Wilson avatar" />
+            </div>
+
+            <div class="message-body">
+              <div class="message-header">
+                <span class="message-author">Sarah Wilson</span>
+                <span class="message-time">9:22 AM</span>
+              </div>
+              <div class="message-bubble">
+                I think we should focus on the data analysis part first.
+              </div>
+            </div>
+          </div>
+
+          <!-- Моє повідомлення -->
+          <div class="message message--own">
+            <div class="message-body">
+              <div class="message-header">
+                <span class="message-author">You</span>
+                <span class="message-time">9:22 AM</span>
+              </div>
+              <div class="message-bubble">
+                Agreed! I can handle the visualization components.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Інпут -->
+      <form class="messager-footer chat-input">
+        <input
+          type="text"
+          placeholder="Type your message..."
+          class="chat-input-field"
+        />
+        <button type="button" class="chat-input-btn">
+          <svg width="24" height="24" class="icon icon-emoji">
+            <use href="/img/icons.svg#icon-happy-1"></use>
+          </svg>
+        </button>
+        <button type="submit" class="chat-input-btn chat-input-btn--send">
+          <svg width="24" height="24" class="icon icon-send">
+            <use href="/img/icons.svg#icon-SVG-13"></use>
+          </svg>
+        </button>
+      </form>
+    </section>
   </div>
-  <div></div>
 </main>
 
-<script src="./js/courses.js"></script> -->
+<script src="./js/messenger.js"></script>
