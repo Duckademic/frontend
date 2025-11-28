@@ -17,7 +17,7 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
-    transition: 200ms ease-in-out;
+    transition: 100ms ease-in-out;
 }
 
 .sidebar-navigation-list-item a {

@@ -6,7 +6,7 @@
         <h1 class="chat-groups-title">DuckChat</h1>
 
         <div class="chat-groups-search">
-          <svg width="23" height="23" class="icon icon-search">
+          <svg width="16" height="16" class="icon">
             <use href="/img/icons.svg#icon-search-1"></use>
           </svg>
           <input
@@ -22,18 +22,15 @@
           <div class="chat-groups-item-main">
             <div class="chat-groups-item-top">
               <h2 class="chat-groups-name">General Discussion</h2>
-              <span class="chat-groups-time">2 min ago</span>
+              <span class="chat-groups-unread">2</span>
             </div>
+            <p class="chat-groups-last-message">
+              Hi everyone. Let's discuss the group assignment.
+            </p>
 
-            <div class="chat-groups-item-bottom">
-              <p class="chat-groups-last-message">
-                Hi everyone. Let's discuss the gro...
-              </p>
-
-              <div class="chat-groups-meta">
-                <span class="chat-groups-participants">45 participants</span>
-                <span class="chat-groups-unread">2</span>
-              </div>
+            <div class="chat-groups-meta">
+              <span class="chat-groups-participants">45 participants</span>
+              <span class="chat-groups-time">2 min ago</span>
             </div>
           </div>
         </li>
@@ -42,18 +39,16 @@
           <div class="chat-groups-item-main">
             <div class="chat-groups-item-top">
               <h2 class="chat-groups-name">Programming Help</h2>
-              <span class="chat-groups-time">15 min ago</span>
+              <span class="chat-groups-unread">1</span>
             </div>
 
-            <div class="chat-groups-item-bottom">
-              <p class="chat-groups-last-message">
-                Can someone help with the loop?
-              </p>
+            <p class="chat-groups-last-message">
+              Can someone help with the loop?
+            </p>
 
-              <div class="chat-groups-meta">
-                <span class="chat-groups-participants">32 participants</span>
-                <span class="chat-groups-unread">1</span>
-              </div>
+            <div class="chat-groups-meta">
+              <span class="chat-groups-participants">32 participants</span>
+              <span class="chat-groups-time">15 min ago</span>
             </div>
           </div>
         </li>
@@ -62,16 +57,14 @@
           <div class="chat-groups-item-main">
             <div class="chat-groups-item-top">
               <h2 class="chat-groups-name">Study Group</h2>
-              <span class="chat-groups-time">1 hour ago</span>
+              <span class="chat-groups-unread no-new-messages">0</span>
             </div>
 
-            <div class="chat-groups-item-bottom">
-              <p class="chat-groups-last-message">Meeting tomorrow at 3 PM</p>
+            <p class="chat-groups-last-message">Meeting tomorrow at 3 PM</p>
 
-              <div class="chat-groups-meta">
-                <span class="chat-groups-participants">8 participants</span>
-                <span class="chat-groups-unread">0</span>
-              </div>
+            <div class="chat-groups-meta">
+              <span class="chat-groups-participants">8 participants</span>
+              <span class="chat-groups-time">1 hour ago</span>
             </div>
           </div>
         </li>
@@ -87,7 +80,7 @@
         </div>
         <div class="messager-header-actions">
           <button type="button" class="messager-header-btn">
-            <svg width="20" height="20" class="icon">
+            <svg width="16" height="16" class="icon">
               <!-- підстав будь-який свій ікон-меню, наприклад три крапки -->
               <use href="/img/icons.svg#icon-SVG-12"></use>
             </svg>
@@ -105,13 +98,12 @@
             </div>
 
             <div class="message-body">
-              <div class="message-header">
-                <span class="message-author">Emily Johnson</span>
-                <span class="message-time">9:20 AM</span>
-              </div>
+              <span class="message-author">Emily Johnson</span>
+
               <div class="message-bubble">
                 Hi everyone. Let's discuss the group assignment.
               </div>
+              <span class="message-time">9:20 AM</span>
             </div>
           </div>
 
@@ -121,26 +113,22 @@
             </div>
 
             <div class="message-body">
-              <div class="message-header">
-                <span class="message-author">Sarah Wilson</span>
-                <span class="message-time">9:22 AM</span>
-              </div>
+              <span class="message-author">Sarah Wilson</span>
               <div class="message-bubble">
                 I think we should focus on the data analysis part first.
               </div>
+              <span class="message-time">9:22 AM</span>
             </div>
           </div>
 
           <!-- Моє повідомлення -->
           <div class="message message--own">
             <div class="message-body">
-              <div class="message-header">
-                <span class="message-author">You</span>
-                <span class="message-time">9:22 AM</span>
-              </div>
+              <span class="message-author">You</span>
               <div class="message-bubble">
                 Agreed! I can handle the visualization components.
               </div>
+              <span class="message-time">9:22 AM</span>
             </div>
           </div>
         </div>
@@ -154,12 +142,12 @@
           class="chat-input-field"
         />
         <button type="button" class="chat-input-btn">
-          <svg width="24" height="24" class="icon icon-emoji">
+          <svg width="28" height="28" class="icon icon-emoji">
             <use href="/img/icons.svg#icon-happy-1"></use>
           </svg>
         </button>
         <button type="submit" class="chat-input-btn chat-input-btn--send">
-          <svg width="24" height="24" class="icon icon-send">
+          <svg width="16" height="16" class="icon icon-send">
             <use href="/img/icons.svg#icon-SVG-13"></use>
           </svg>
         </button>
