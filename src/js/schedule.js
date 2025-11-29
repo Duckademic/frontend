@@ -8,7 +8,6 @@ const scheduleData = {
       title: "Introduction to Programming",
       teacher: "Dr. Smith",
       type: "Lecture",
-      modeIcon: "💻",
       modeText: "Online",
       dates: "[23.01–28.05]",
       color: "blue",
@@ -19,7 +18,6 @@ const scheduleData = {
       title: "Data Science Lab",
       teacher: "Prof. Johnson",
       type: "Lab",
-      modeIcon: "📍",
       modeText: "Room 101",
       dates: "[24.01–31.01, 14.02–01.05, 15.05–29.05]",
       color: "green",
@@ -30,7 +28,6 @@ const scheduleData = {
       title: "Web Development Workshop",
       teacher: "Dr. Williams",
       type: "Lecture",
-      modeIcon: "💻",
       modeText: "Online",
       dates: "[23.01, 06.02]",
       color: "rose",
@@ -41,7 +38,6 @@ const scheduleData = {
       title: "Study Group – Algorithms",
       teacher: "Student Led",
       type: "Lab",
-      modeIcon: "📍",
       modeText: "Library Room 3",
       dates: "[24.01–31.01, 14.02–01.05, 15.05–29.05]",
       color: "amber",
@@ -55,7 +51,6 @@ const scheduleData = {
       title: "Discrete Mathematics",
       teacher: "Dr. Brown",
       type: "Lecture",
-      modeIcon: "📍",
       modeText: "Room 204",
       dates: "[24.01–30.05]",
       color: "blue",
@@ -66,7 +61,6 @@ const scheduleData = {
       title: "Operating Systems",
       teacher: "Dr. Miller",
       type: "Lecture",
-      modeIcon: "📍",
       modeText: "Room 305",
       dates: "[24.01–30.05]",
       color: "rose",
@@ -77,7 +71,6 @@ const scheduleData = {
       title: "Operating Systems Lab",
       teacher: "Assistant Team",
       type: "Lab",
-      modeIcon: "💻",
       modeText: "Online",
       dates: "[31.01–31.05]",
       color: "green",
@@ -91,7 +84,6 @@ const scheduleData = {
       title: "Database Systems",
       teacher: "Dr. Smith",
       type: "Lecture",
-      modeIcon: "📍",
       modeText: "Room 110",
       dates: "[25.01–31.05]",
       color: "blue",
@@ -102,7 +94,6 @@ const scheduleData = {
       title: "Database Lab",
       teacher: "Prof. Johnson",
       type: "Lab",
-      modeIcon: "💻",
       modeText: "Online",
       dates: "[01.02–31.05]",
       color: "green",
@@ -113,7 +104,6 @@ const scheduleData = {
       title: "Software Engineering",
       teacher: "Dr. Williams",
       type: "Lecture",
-      modeIcon: "📍",
       modeText: "Room 207",
       dates: "[25.01–31.05]",
       color: "rose",
@@ -127,7 +117,6 @@ const scheduleData = {
       title: "Computer Networks",
       teacher: "Dr. Green",
       type: "Lecture",
-      modeIcon: "📍",
       modeText: "Room 301",
       dates: "[26.01–01.06]",
       color: "blue",
@@ -138,7 +127,6 @@ const scheduleData = {
       title: "Computer Networks Lab",
       teacher: "Assistant Team",
       type: "Lab",
-      modeIcon: "💻",
       modeText: "Online",
       dates: "[02.02–01.06]",
       color: "green",
@@ -149,7 +137,6 @@ const scheduleData = {
       title: "UI/UX Workshop",
       teacher: "Guest Lecturer",
       type: "Lecture",
-      modeIcon: "💻",
       modeText: "Online",
       dates: "[09.02, 23.02, 09.03]",
       color: "amber",
@@ -163,7 +150,6 @@ const scheduleData = {
       title: "Probability & Statistics",
       teacher: "Dr. Carter",
       type: "Lecture",
-      modeIcon: "📍",
       modeText: "Room 210",
       dates: "[27.01–02.06]",
       color: "blue",
@@ -174,7 +160,6 @@ const scheduleData = {
       title: "Machine Learning Basics",
       teacher: "Prof. Johnson",
       type: "Lecture",
-      modeIcon: "💻",
       modeText: "Online",
       dates: "[27.01–02.06]",
       color: "rose",
@@ -185,7 +170,6 @@ const scheduleData = {
       title: "Project Work – Duckademic",
       teacher: "Mentor Team",
       type: "Lab",
-      modeIcon: "💻",
       modeText: "Project Room / Online",
       dates: "[03.02–02.06]",
       color: "amber",
@@ -193,7 +177,13 @@ const scheduleData = {
   ],
 };
 
-// Порядок днів для перемикання стрілками
+// ===== Мапа: тип заняття -> id іконки в icons.svg =====
+const typeIconId = {
+  Lecture: "icon-video",
+  Lab: "icon-navigation",
+};
+
+// ===== Порядок днів для перемикання стрілками =====
 const dayOrder = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 let currentDayIndex = 0;
 
@@ -208,23 +198,32 @@ function createClassRowHTML(lesson) {
   const timeRange = `${lesson.start} – ${lesson.end}`;
   const colorClass = `class-row--${lesson.color}`;
 
+  const iconId = typeIconId[lesson.type] || "icon-navigation"; // fallback
+  const tagClass = lesson.type === "Lab" ? "class-tag white-tag" : "class-tag";
+
   return `
     <li class="class-row ${colorClass}">
       <div class="class-time">${timeRange}</div>
+
       <article class="class-card">
         <div class="class-card-inner">
           <header class="class-card-header">
             <h2 class="class-title">${lesson.title}</h2>
-            <span class="class-tag">${lesson.type}</span>
+            <span class="${tagClass}">${lesson.type}</span>
           </header>
 
           <p class="class-teacher">${lesson.teacher}</p>
 
           <div class="class-meta">
             <div class="class-meta-item">
-              <span class="class-meta-icon">${lesson.modeIcon}</span>
+              <span class="class-meta-icon" aria-hidden="true">
+                <svg width="18" height="18">
+                  <use href="/img/icons.svg#${iconId}"></use>
+                </svg>
+              </span>
               <span>${lesson.modeText}</span>
             </div>
+
             <div class="class-meta-dates">
               ${lesson.dates}
             </div>
@@ -234,6 +233,7 @@ function createClassRowHTML(lesson) {
     </li>
   `;
 }
+
 
 // ===== Рендер дня =====
 function renderDay() {
@@ -256,8 +256,7 @@ function renderDay() {
     return;
   }
 
-  const html = lessons.map(createClassRowHTML).join("");
-  classesListEl.innerHTML = html;
+  classesListEl.innerHTML = lessons.map(createClassRowHTML).join("");
 }
 
 // ===== Обробники кнопок попередній/наступний день =====
@@ -273,7 +272,7 @@ if (prevBtn && nextBtn) {
   });
 }
 
-// Початковий рендер
+// ===== Початковий рендер =====
 if (classesListEl && dayLabelEl) {
   renderDay();
 }

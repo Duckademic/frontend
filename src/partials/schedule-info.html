@@ -7,42 +7,58 @@
       <section class="schedule-main">
         <header class="schedule-main-header">
           <div class="schedule-main-left">
-            <span class="schedule-main-icon">⏺</span>
+            <svg width="20" height="20">
+              <use href="/img/icons.svg#icon-SVG-11" />
+            </svg>
             <span class="schedule-main-heading">Today&apos;s Classes</span>
           </div>
 
           <div class="schedule-main-controls">
-            <button
-              class="schedule-nav-btn"
-              type="button"
-              id="schedule-prev-btn"
-            >
-              ‹
-            </button>
+            <div>
+              <button
+                class="schedule-nav-btn"
+                type="button"
+                id="schedule-prev-btn"
+              >
+                <svg width="14" height="20">
+                  <use href="/img/icons.svg#icon-vector-left" />
+                </svg>
+              </button>
 
-            <button
-              class="schedule-day-btn"
-              type="button"
-              id="schedule-day-btn"
-            >
-              <span id="schedule-day-label">Monday</span>
-            </button>
+              <button
+                class="schedule-day-btn"
+                type="button"
+                id="schedule-day-btn"
+              >
+                <span class="schedule-day-label" id="schedule-day-label"
+                  >Monday</span
+                >
+              </button>
 
-            <button
-              class="schedule-nav-btn"
-              type="button"
-              id="schedule-next-btn"
-            >
-              ›
-            </button>
+              <button
+                class="schedule-nav-btn"
+                type="button"
+                id="schedule-next-btn"
+              >
+                <svg width="14" height="20">
+                  <use href="/img/icons.svg#icon-vector-right" />
+                </svg>
+              </button>
+            </div>
 
             <button
               class="schedule-view-select"
               type="button"
               id="schedule-view-btn"
             >
-              <span id="schedule-view-label">General</span>
-              <span class="schedule-view-caret">▾</span>
+              <span class="schedule-view-label" id="schedule-view-label"
+                >General</span
+              >
+              <span class="schedule-view-caret">
+                <svg width="18" height="13">
+                  <use href="/img/icons.svg#icon-vector-down" />
+                </svg>
+              </span>
             </button>
           </div>
         </header>
@@ -56,40 +72,62 @@
         <div class="filter-group">
           <label class="filter-label">Faculty</label>
           <button class="filter-select" type="button">
-            <span>Faculty of Information Technology</span>
-            <span class="filter-caret">▾</span>
+            <span class="filter-caret-value"
+              >Faculty of Information Technology</span
+            >
+            <span class="schedule-view-caret filter-caret">
+              <svg width="18" height="13">
+                <use href="/img/icons.svg#icon-vector-down" />
+              </svg>
+            </span>
           </button>
         </div>
 
         <div class="filter-group">
           <label class="filter-label">Specialty</label>
           <button class="filter-select" type="button">
-            <span>Software Engineering</span>
-            <span class="filter-caret">▾</span>
+            <span class="filter-caret-value">Software Engineering</span>
+            <span class="schedule-view-caret filter-caret">
+              <svg width="18" height="13">
+                <use href="/img/icons.svg#icon-vector-down" />
+              </svg>
+            </span>
           </button>
         </div>
 
         <div class="filter-group">
           <label class="filter-label">Year</label>
           <button class="filter-select" type="button">
-            <span>3 Bachelor</span>
-            <span class="filter-caret">▾</span>
+            <span class="filter-caret-value">3 Bachelor</span>
+            <span class="schedule-view-caret filter-caret">
+              <svg width="18" height="13">
+                <use href="/img/icons.svg#icon-vector-down" />
+              </svg>
+            </span>
           </button>
         </div>
 
         <div class="filter-group">
           <label class="filter-label">Group</label>
           <button class="filter-select" type="button">
-            <span>2</span>
-            <span class="filter-caret">▾</span>
+            <span class="filter-caret-value">2</span>
+            <span class="schedule-view-caret filter-caret">
+              <svg width="18" height="13">
+                <use href="/img/icons.svg#icon-vector-down" />
+              </svg>
+            </span>
           </button>
         </div>
 
         <div class="filter-group">
           <label class="filter-label">Subgroup</label>
           <button class="filter-select" type="button">
-            <span>5</span>
-            <span class="filter-caret">▾</span>
+            <span class="filter-caret-value">4</span>
+            <span class="filter-caret">
+              <svg width="18" height="13">
+                <use href="/img/icons.svg#icon-vector-down" />
+              </svg>
+            </span>
           </button>
         </div>
       </aside>
