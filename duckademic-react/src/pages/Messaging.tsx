@@ -119,7 +119,11 @@ export default function Messaging() {
     if (!text) return;
 
     const now = new Date();
-    const time = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    const time = now.toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    });
 
     const newMsg: ChatMessage = {
       id: `m-${crypto?.randomUUID?.() ?? Math.random().toString(16).slice(2)}`,

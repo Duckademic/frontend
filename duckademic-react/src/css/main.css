@@ -167,6 +167,10 @@
     font-size: 12px;
 }
 
+.time-container.time-container--assignment {
+    color: #ea7f0c;
+}
+
 .upcoming-item .type {
     margin-top: 8px;
     margin-right: auto;
@@ -177,6 +181,11 @@
     font-size: 12px;
     line-height: 12px;
     color: #18181b;
+}
+
+.upcoming-item .type.type--lecture {
+    background-color: #18181b;
+    color: #ffffff;
 }
 
 /* === Feed (центр) === */

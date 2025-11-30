@@ -215,22 +215,36 @@ function Upcoming({ events }: { events: UpcomingEvent[] }) {
       </div>
 
       <ul id="upcoming-list">
-        {events.map((e) => (
-          <li className="upcoming-item" key={e.id}>
-            <h3 className="title">{e.title}</h3>
+        {events.map((e) => {
+          const isAssignment = e.type === "Assignment";
+          const isLab = e.type === "Lab";
+          const isLecture = e.type === "Lecture";
 
-            <div className="time-container">
-              <Icon href={e.iconHref} w={16} h={16} className="icon" />
-              <p className="time">{e.time}</p>
-            </div>
+          const showTypePill = !isAssignment;              // Assignment — не показуємо бейдж
+          const showTimeIcon = !(isLab || isLecture);      // Lab/Lecture — не показуємо svg в часі
 
-            <h4 className="type">{e.type}</h4>
-          </li>
-        ))}
+          return (
+            <li className="upcoming-item" key={e.id}>
+              <h3 className="title">{e.title}</h3>
+
+              <div className={`time-container ${isAssignment ? "time-container--assignment" : ""}`}>
+                {showTimeIcon && <Icon href={e.iconHref} w={16} h={16} className="icon" />}
+                <p className="time">{e.time}</p>
+              </div>
+
+              {showTypePill && (
+                <h4 className={`type ${isLecture ? "type--lecture" : ""}`}>
+                  {e.type}
+                </h4>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
 }
+
 
 function CourseProgress({ items }: { items: CourseProgress[] }) {
   return (

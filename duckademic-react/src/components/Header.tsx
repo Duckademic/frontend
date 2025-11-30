@@ -5,7 +5,7 @@ export default function Header() {
     <header className="header">
       <div className="container">
         <nav className="header-navigation">
-          <Link to="/" className="logo">
+          <Link to="/dashboard" className="logo">
             <svg width="28" height="32" className="icon">
               <use href="/img/icons.svg#icon-Logo-1-1"></use>
             </svg>
@@ -29,7 +29,7 @@ export default function Header() {
               </svg>
             </button>
 
-            <Link to="/" className="header-actions-profile" aria-label="Profile">
+            <Link to="/dashboard" className="header-actions-profile" aria-label="Profile">
               <img src="/img/profile_pic.png" alt="profile" />
             </Link>
           </div>
