@@ -145,11 +145,14 @@
 
 .upcoming-item {
     background-color: #f9fafb;
-    margin-bottom: 20px;
     border-radius: 8px;
     padding: 12px;
     display: flex;
     flex-direction: column;
+}
+
+.upcoming-item:not(:last-child) {
+    margin-bottom: 20px;
 }
 
 .upcoming-item .title {

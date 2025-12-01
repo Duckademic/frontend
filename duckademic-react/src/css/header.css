@@ -73,6 +73,7 @@
 
 .icon-bell {
     fill: #3d3d3e;
+    transition: all 150ms ease-in-out;
 }
 
 .icon-bell-has-new {
